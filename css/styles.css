@@ -1,97 +1,105 @@
-                        /* RESET */
-                        html, body, div, span, applet, object, iframe,
-                        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-                        a, abbr, acronym, address, big, cite, code,
-                        del, dfn, em, img, ins, kbd, q, s, samp,
-                        small, strike, strong, sub, sup, tt, var,
-                        b, u, i, center,
-                        dl, dt, dd, ol, ul, li,
-                        fieldset, form, label, legend,
-                        table, caption, tbody, tfoot, thead, tr, th, td,
-                        article, aside, canvas, details, embed, 
-                        figure, figcaption, footer, header, hgroup, 
-                        menu, nav, output, ruby, section, summary,
-                        time, mark, audio, video {
-                          margin: 0;
-                          padding: 0;
-                          border: 0;
-                          font-size: 100%;
-                          font: inherit;
-                          vertical-align: baseline;
-                          max-width: 100%;
-                        }
-                        /* HTML5 display-role reset for older browsers */
-                        article, aside, details, figcaption, figure, 
-                        footer, header, hgroup, menu, nav, section {
-                          display: block;
-                        }
-                        body {
-                          line-height: 1;
-                        }
-                        ol, ul {
-                          list-style: none;
-                        }
-                        blockquote, q {
-                          quotes: none;
-                        }
-                        blockquote:before, blockquote:after,
-                        q:before, q:after {
-                          content: '';
-                          content: none;
-                        }
-                        table {
-                          border-collapse: collapse;
-                          border-spacing: 0;
-                        }
-
-/* My CSS */
+@import "reset.css";
 
 html {
   scroll-behavior: smooth;
-  font-family: Poppins, sans-serif;
 }
 
 body {
   font-family: Poppins, sans-serif;
 }
 
-.falcon-section {
-  height: 100vh;
-  background-image: url('/imgs/bg.jpg');
-  background-size: cover;
-  background-position: center;
+h1 {
+  font-size: 35px;
 }
 
-.nav {
+h2 {
+  font-size: 25px;
+}
+
+.icon {
+  width: 50px; 
+}
+
+/* Navbar */
+nav {
+  position: fixed;
   background-color: #3a3639;
-  padding: 10px;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-items {
+  position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 100vw;
+  top: 0;
+  right: 20px;
 }
 
-.logo {
-  display: block;
-}
-
-.nav > a {
+.nav-item {
+  width: 100%;
+  margin-right: 50px;
   text-decoration: none;
   color: white;
-  margin: 0 40px;
-  font-family: 'Poppins', sans-serif;
-  transition: 0.1s ease-in-out
+  font-size: 20px;
 }
+
+.underline-content {
+  position: relative;
+}
+
+.underline-content .nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.underline {
+  position: absolute;
+  width: 0%;
+  height: 6px;
+  bottom: 0;
+  background-color: white;
+  transition: width 0.3s;
+  border-radius: 2px;
+}
+
+.underline-content:hover .underline {
+  margin: 0 10% 0 10%;
+  width: 80%;
+}
+
 
 .logo {
-  display: block;
-  height: 40px;
+  display: flex;
+  width: 60px;
+  margin-left: 10px;
 }
 
-.nav > a:hover {
-  opacity: 0.5;
+.logo:hover {
+  transition: opacity 0.2s;
+  opacity: 0.6;
 }
+
+/* Falcon */
+
+.falcon-section {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/imgs/bg.jpg');
+  top: 24px;
+}
+
+.banner {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
 
 .row {
   display: flex;

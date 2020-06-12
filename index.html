@@ -13,41 +13,66 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <a href=".section-main" class="logo">
+      <a href="#section-main" class="logo">
         <img src="imgs/logo.svg" class="icon" alt="icon">
       </a>
       <div class="nav-items">
         <div class="underline-content">
-          <a href=".section-features" class="nav-item">Features</a>
+          <a href="#section-features" class="nav-item">Features</a>
           <div class="underline"></div>
         </div>
         <div class="underline-content">
-          <a href=".section-advantages" class="nav-item">Advantages</a>
+          <a href="#section-advantages" class="nav-item">Advantages</a>
           <div class="underline"></div>
         </div>
         <div class="underline-content">
-          <a href=".section-gallery" class="nav-item">Gallery</a>
+          <a href="#section-gallery" class="nav-item">Gallery</a>
           <div class="underline"></div>
         </div>
-        <div class="underline-content">
-          <a href="#" class="nav-item">Products</a>
+        <div class="dropdown underline-content">
+          <span class="nav-dropdown nav-item">Products
+            <div class="dropdown-menu">
+              <ul class="items">
+                <li><a href="https://www.spacex.com/vehicles/falcon-9/" target="_blank">Falcon 9</a></li>
+                <li><a href="https://www.tesla.com/models" target="_blank">Model S</a></li>
+                <li><a href="https://www.apple.com/iphone/" target="_blank">iPhone</a></li>
+              </ul>
+            </div>
+          </span>
           <div class="underline"></div>
         </div>
       </div>
       <!-- at cutoff
-      <img src="imgs/menu.svg" alt="menu"> -->
+      <img src="imgs/menu.svg" alt="mobile-menu"> -->
     </nav>
 
-    <!-- Falcon section -->
-    <div class="falcon-section">
-      <h1 class="banner">Introducing Falcon 9</h1>
-      <h2>We make dreams come true</h2>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo at veniam unde, ea vero, dicta doloremque cupiditate animi harum eaque voluptatibus inventore, repudiandae sed eius suscipit? Qui illum vitae consequuntur.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat neque a nemo asperiores id quis doloremque consequatur dolorem similique incidunt, porro consectetur ab optio explicabo velit fugit repudiandae nostrum culpa.
-    </div>
+    <!-- Main section -->
+    <section class="section-main" id="section-main">
+      <img src="imgs/bg.jpg" alt="Rocket in the clouds" class="bg">
+      <div class="falcon-container">
+        <div class="falcon-left">
+          <h1>Introducing Falcon 9</h1>
+        </div>
+        <div class="falcon-right">
+          <h2>We make dreams come true</h2>
+          <div class="lorem-text">
+            <p class="lorem-left">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam.
+            </p>
+            <p class="lorem-right">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Feature showcase section -->
-    <div class="feature-section">
+    <section id="section-features">
       <div class="feature">
       <img src="imgs/icon1.svg" alt="Checkmark green">
       Amazing feature 1
@@ -66,32 +91,35 @@
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo iusto eveniet vel enim culpa facere id ipsum quia incidunt, adipisci totam possimus? Consectetur, quas hic laudantium quod ex ipsam.
       Do it
       </div>
-    </div>
+    </section>
 
-    <!-- Cool text section -->
-    <div>
-      Some cool text
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in ad nesciunt voluptatibus nihil deleniti maiores repellendus sunt minus cumque porro placeat, eveniet quibusdam! Architecto ab repellendus obcaecati iste. Adipisci.
-    </div>
-    
-    <!-- Animation -->
-    <div>
-      This looks cool
-      Hover me if you like random animations
-    </div>
+    <!-- Advantages -->
+    <section id="section-advantages">
+      <!-- Cool text -->
+      <div>
+        Some cool text
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in ad nesciunt voluptatibus nihil deleniti maiores repellendus sunt minus cumque porro placeat, eveniet quibusdam! Architecto ab repellendus obcaecati iste. Adipisci.
+      </div>
+      
+      <!-- Animation -->
+      <div>
+        This looks cool
+        Hover me if you like random animations
+      </div>
 
 
-    <!-- Gradient -->
-    <div>
-      Slick gradient
-      Lorem ipsum?
-    </div>
+      <!-- Gradient -->
+      <div>
+        Slick gradient
+        Lorem ipsum?
+      </div>
+    </section>
 
 
     <img src="imgs/checkbox.svg" alt="Checkmark white">
 
     <!-- Bottom grid -->
-    <span class="grid">
+    <gallery class="" id="section-gallery">
       <div class="row">
         <img src="imgs/tesla.jpg" class="pic" alt="Tesla">
         <img src="imgs/procat.jpg" class="pic" alt="Annoyed cat">
@@ -102,7 +130,7 @@
         <img src="imgs/bfr.jpeg" class="pic" alt="Rocket Above">
         <img src="imgs/funnycat.jpg" class="pic" alt="Funny cat">
       </div>
-    </span>
+    </gallery>
 
     <!-- Mailing list -->
     Register to our mailing list:

@@ -9,11 +9,11 @@ body {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .icon {
@@ -21,6 +21,7 @@ h2 {
 }
 
 /* Navbar */
+
 nav {
   position: fixed;
   background-color: #3a3639;
@@ -28,6 +29,17 @@ nav {
   height: 50px;
   width: 100%;
   z-index: 999;
+}
+
+.logo {
+  display: flex;
+  width: 60px;
+  margin-left: 10px;
+}
+
+.logo:hover {
+  transition: opacity 0.2s;
+  opacity: 0.6;
 }
 
 .nav-items {
@@ -68,37 +80,105 @@ nav {
 }
 
 .underline-content:hover .underline {
-  margin: 0 10% 0 10%;
+  margin: 0 10% 0;
   width: 80%;
 }
 
+.nav-dropdown {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
 
-.logo {
+.nav-dropdown:hover > .dropdown-menu {
+  display: block;
+  position: absolute;
+  background-color: darkgrey;
+  top: 100%;
+  right: 5%;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+.items {
+  margin: 0;
+  padding: 0;
+}
+
+.items > li {
+  padding: 20px;
+  text-decoration: none;
+}
+
+.items > li:hover {
+  background-color: lightgrey;
+}
+
+/* NOTE: cannot remove underline, and dropdown does not stay most of the time */
+
+
+
+/* Main */
+
+.bg {
   display: flex;
-  width: 60px;
-  margin-left: 10px;
+  object-fit: cover;
+  /* align-items: center;
+  justify-content: center; */
+  width: 100vw;
+  height: calc(100vh - 50px);
+  padding-top: 50px;
 }
 
-.logo:hover {
-  transition: opacity 0.2s;
-  opacity: 0.6;
+.falcon-container {
+  display: flex;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  border: 5px solid white;
+  width: 50vw;
+  height: 40vh;
+  transform: translate(-50%, -50%);
 }
 
-/* Falcon */
-
-.falcon-section {
-  background-size: cover;
-  height: 100vh;
+.falcon-left {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/imgs/bg.jpg');
-  top: 24px;
+  padding: 20px;
 }
 
-.banner {
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
+.falcon-right {
+  background-color: rgba(100, 100, 100, 0.4);
 }
+
+.falcon-right h2, .lorem-text {
+  margin: 0 auto;
+  width: 92%;
+}
+.falcon-right h2 {
+  border-bottom: 2px dotted white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-bottom: 2%;
+}
+
+.lorem-text {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+.lorem-left {
+  margin-right: 15px;
+}
+
+
+
+
 
 
 .row {

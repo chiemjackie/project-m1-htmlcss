@@ -16,6 +16,10 @@ h2 {
   font-size: 30px;
 }
 
+h3 {
+  font-size: 20px;
+}
+
 .icon {
   width: 50px; 
 }
@@ -62,7 +66,7 @@ nav {
   position: relative;
 }
 
-.underline-content .nav-item {
+.underline-content > .nav-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +83,7 @@ nav {
   border-radius: 2px;
 }
 
-.underline-content:hover .underline {
+.underline-content:hover > .underline {
   margin: 0 10% 0;
   width: 80%;
 }
@@ -133,14 +137,14 @@ nav {
 }
 
 .falcon-container {
+  border: 5px solid white;
   display: flex;
   position: absolute;
   color: white;
   top: 50%;
   left: 50%;
-  border: 5px solid white;
-  width: 50vw;
-  height: 40vh;
+  height: 45vh;
+  width: 45vw;
   transform: translate(-50%, -50%);
 }
 
@@ -155,21 +159,23 @@ nav {
   background-color: rgba(100, 100, 100, 0.4);
 }
 
-.falcon-right h2, .lorem-text {
+.falcon-right > h2,
+.lorem-text {
   margin: 0 auto;
-  width: 92%;
+  width: 90%;
 }
+
 .falcon-right h2 {
-  border-bottom: 2px dotted white;
   margin-top: 5%;
   margin-bottom: 5%;
   padding-bottom: 2%;
+  border-bottom: 2px dotted white;
 }
 
 .lorem-text {
   display: flex;
-  font-size: 20px;
   justify-content: space-between;
+  font-size: 20px;
 }
 
 .lorem-left {
@@ -177,9 +183,65 @@ nav {
 }
 
 
+/* Features */
+
+.section-features {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 60vh;
+  margin: 0 40px;
+}
+
+.feature {
+  display: grid;
+  grid-template-rows: 30px 30px 120px;
+  grid-row-gap: 30px;
+  text-align: center;
+  width: 390px;
+  box-shadow: 2px 2px 10px darkgray;
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+
+.feature > .icon {
+  margin: 0 auto;
+}
+
+.section-features > .feature > p {
+  color: gray;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.feature-button {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  background-color: #3a3639;
+  color: white;
+  height: 50px;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.feature-button:focus {
+  border: 3px solid rgb(0, 100, 255);
+  border-radius: 5px;
+}
+
+/* How to get space between border and button? */
+
+
+/* Advantages */
 
 
 
+/* Gallery */
 
 .row {
   display: flex;
@@ -192,6 +254,8 @@ nav {
   width: calc(100% / 3);
   height: calc(100% / 3);
 }
+
+/* Footer */
 
 footer {
   display: flex;

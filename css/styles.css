@@ -9,19 +9,19 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 45px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 h4 {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .icon {
@@ -42,7 +42,7 @@ nav {
 .logo {
   display: flex;
   width: 60px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .logo:hover {
@@ -60,7 +60,7 @@ nav {
 
 .nav-item {
   width: 100%;
-  margin-right: 50px;
+  margin-right: 100px;
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -83,13 +83,13 @@ nav {
   height: 6px;
   bottom: 0;
   background-color: white;
-  transition: width 0.3s;
+  transition: width 0.2s;
   border-radius: 2px;
 }
 
 .underline-content:hover > .underline {
-  margin: 0 10% 0;
-  width: 80%;
+  margin: 0 17% 0;
+  width: 66%;
 }
 
 .nav-dropdown {
@@ -124,8 +124,7 @@ nav {
   background-color: lightgrey;
 }
 
-/* NOTE: cannot remove underline, and dropdown does not stay most of the time */
-
+/* Dropdown does not stay most of the time, and navigation needs padding */
 
 
 /* Main */
@@ -147,8 +146,8 @@ nav {
   color: white;
   top: 50%;
   left: 50%;
-  height: 45vh;
-  width: 45vw;
+  height: 55vh;
+  width: 55vw;
   transform: translate(-50%, -50%);
 }
 
@@ -180,6 +179,7 @@ nav {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
+  line-height: 27px;
 }
 
 .lorem-left {
@@ -241,13 +241,12 @@ nav {
 
 /* Advantages */
 
-.advantage {
+.advantages {
   box-sizing: border-box;
   color: white;
-  min-height: 65vh;
-  padding-top: 40px;
+  min-height: calc((100vh - 50px)/2);
   background-color: #3a3639;
-  padding-top: 80px;
+  padding-top: 35px;
 }
 
 .advantage-text {
@@ -255,22 +254,22 @@ nav {
   margin-top: 5vh;
 }
 
-.advantage > h2 {
+.advantages > h2 {
   font-size: 50px;
 }
 
-.advantage > p {
+.advantages > p {
   font-size: 25px;
 }
 
-.advantage,
+.advantages,
 .animated-box {
   padding-left: 40px;
 }
 
-.gradient-container {
+.gradient {
   text-align: right;
-  background-image: linear-gradient(90deg, white 8%, rgb(0, 150, 255));
+  background-image: linear-gradient(90deg, white, rgb(0, 125, 255));
   padding-right: 40px
 }
 
@@ -280,73 +279,217 @@ nav {
   background-color: #3a3639;
   border: 7px solid white;
   color: white;
+  height: 16vh;
   width: 20vw;
-  height: 20vh;
   text-align: center;
-  padding: 40px 20px 0 20px;
+  padding: 65px 20px 0 20px;
   margin: -12vh 3vw;
 }
 
 .animated-box h4 {
   color: red;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 .animated-box p {
-  padding-top: 15px;
-  font-size: 20px;
+  padding-top: 25px;
+  font-size: 22px;
 }
 
 .animated-box:hover {
   animation-name: box-animation;
-  animation-fill-mode: forwards;
-  animation-duration: 4s;
+  animation-duration: 5s;
 }
 
 @keyframes box-animation {
   30% {
-    transform: translate(15vw, 0) rotate(180deg) scale(1);
+    transform: translate(20vw, 0) rotate(180deg) scale(1);
   }
-  50% {
-    transform: translate(15vw, 0) rotate(180deg) scale(0.6);
+  55% {
+    transform: translate(20vw, 0) rotate(180deg) scale(0.6);
   }
-  70% {
-    transform: translate(15vw, 0) rotate(180deg) scale(0);
+  75% {
+    transform: translate(20vw, 0) rotate(180deg) scale(0);
   }
   80% {
-    transform: translate(15vw, 0) rotate(180deg) scale(0);
+    transform: translate(20vw, 0) rotate(180deg) scale(0);
   }
 }
 
 
 /* Gallery */
 
-.row {
+.section-gallery {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
 }
 
-.row > img {
-  box-sizing: border-box;
+.zoom {
+  height: 35vh;
   width: calc(100% / 3);
-  height: calc(100% / 3);
+  overflow: hidden;
+  position: relative;
 }
 
+.photo {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 
-/* Mailing list */
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
 
+.hover-text {
+  color: white;
+  font-size: 27px;
+  opacity: 0;
+}
+
+.zoom:hover > .photo {
+  transform: scale(1.15);
+}
+
+.zoom > .photo ~ .overlay:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.zoom > .photo ~ .overlay:hover > .hover-text {
+  opacity: 1;
+}
+
+.photo,
+.overlay,
+.hover-text {
+  transition: 0.5s;
+}
+
+/* Mailing list form */
+
+.register,
+footer {
+  display: flex;
+  height: 25vh;
+  line-height: 50px;
+}
+
+.register {
+  justify-content: center;
+  align-items: center;
+}
+
+.mail-submit {
+  display: flex;
+}
+
+.mailing-list,
+.register-button,
+.checkbox {
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.mailing-list {
+  border: 2px solid darkgray;
+  border-radius: 4px;
+  height: 36px;
+  width: 80%;
+  padding-right: 60px;
+  font-size: inherit;
+}
+
+.register-button {
+  background-color: darkgray;
+  border: none;
+  width: 50px;
+  height: 40px;
+  margin-left: -50px;
+  margin-right: 0;
+}
+
+.mailing-list:hover,
+.mailing-list:focus,
+.checkbox:hover {
+  border-color: #3a3639;
+}
+
+.mailing-list:hover ~ .register-button,
+.mailing-list:focus ~ .register-button {
+  background-color: #3a3639;
+}
+
+.confirmation-label {
+  display: block;
+  position: relative;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
+.confirmation-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+}
+
+.checkbox-content {
+  margin: -5px 0 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.confirmation-label > input:checked ~ .checkbox {
+  background-color: #3a3639;
+  background-image: url(/imgs/checkbox.svg);
+  border: 2px solid #3a3639;
+}
 
 
 /* Footer */
 
 footer {
+  justify-content: space-around;
+  height: 25%;
+  min-height: 25vh;
+  border-top: 1px solid lightgrey;
+}
+
+footer > div {
   display: flex;
   flex-direction: column;
-  line-height: 40px;
+  justify-content: center;
 }
 
 footer > div > a {
-  padding: 0px 50px;
+  font-size: 16px;
   text-decoration: none;
+  color: black;
 }
+
+footer > div > a:hover {
+  text-decoration: underline;
+}
+
+
+/* Media */

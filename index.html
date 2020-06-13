@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    
     <!-- Navbar -->
     <nav>
       <a href="#section-main" class="logo">
@@ -46,6 +47,7 @@
       <img src="imgs/menu.svg" alt="mobile-menu"> -->
     </nav>
 
+
     <!-- Main section -->
     <section id="section-main">
       <img src="imgs/bg.jpg" alt="Rocket in the clouds" class="bg">
@@ -66,6 +68,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- Feature showcase section -->
     <section class="section-features" id="section-features">
@@ -97,13 +100,11 @@
 
 
     <!-- Advantages -->
-    <div class="section-advantages" id="section-advantages">
-      <section class="advantage">
+    <section class="section-advantages" id="section-advantages">
+      <div class="advantages">
         <h2 class="advantage-text">Some cool text</h2>
         <p class="advantage-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam itaque debitis facere.
         </p>
       </section>
       <div class="animated-box">
@@ -112,37 +113,77 @@
           Hover me if you like random animations
         </p>
       </div>
-      <section class="advantage gradient-container">
+      <section class="advantages gradient">
         <h2 class="advantage-text">Slick gradient</h2>
         <p class="advantage-text">
           Lorem ipsum?
         </p>
-      </section>
-    </div>
-
-
-    <img src="imgs/checkbox.svg" alt="Checkmark white">
-
-    <!-- Bottom grid -->
-    <gallery class="" id="section-gallery">
-      <div class="row">
-        <img src="imgs/tesla.jpg" class="pic" alt="Tesla">
-        <img src="imgs/procat.jpg" class="pic" alt="Annoyed cat">
-        <img src="imgs/hyperloop.jpg" class="pic" alt="hyperloop">
       </div>
-      <div class="row">
-        <img src="imgs/sneakycat.jpg" class="pic" alt="Sneaky cat">
-        <img src="imgs/bfr.jpeg" class="pic" alt="Rocket Above">
-        <img src="imgs/funnycat.jpg" class="pic" alt="Funny cat">
+    </section>
+
+
+    <!-- Gallery -->
+    <section class="section-gallery" id="section-gallery">
+      <div class="zoom">
+        <img src="imgs/tesla.jpg" alt="Our flagship car: The Model S" class="photo">
+        <div class="overlay">
+          <p class="hover-text">Our flagship car: The Model S</p>
+        </div>
       </div>
-    </gallery>
+      <div class="zoom">
+        <img src="imgs/procat.jpg" alt="Cool cat" class="photo">
+        <div class="overlay">
+          <p class="hover-text">Cool cat</p>
+        </div>
+      </div>
+      <div class="zoom">
+        <img src="imgs/hyperloop.jpg" alt="Introducing: The Hyperloop" class="photo">
+        <div class="overlay">
+          <p class="hover-text">Introducing: The Hyperloop</p>
+        </div>
+      </div>
+      <div class="zoom">
+        <img src="imgs/sneakycat.jpg" alt="So sneaky" class="photo">
+        <div class="overlay">
+          <p class="hover-text">So sneaky</p>
+        </div>
+      </div>
+      <div class="zoom">
+        <img src="imgs/bfr.jpeg" alt="BFR - Big Falcon Rocket" class="photo"\>
+        <div class="overlay">
+          <p class="hover-text">BFR - Big Falcon Rocket</p>
+        </div>
+      </div>
+      <div class="zoom">
+        <img src="imgs/funnycat.jpg" alt="So much fun" class="photo">
+        <div class="overlay">
+          <p class="hover-text">So much fun</p>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Mailing list -->
-    Register to our mailing list:
-    <input type="textbox">
-    <button>
-      <img src="imgs/send.svg" alt="Send">
-    </button>
+    <form class="register">
+      <div>
+        <label for="mailing-list">
+          Register to our mailing list:
+        </label>
+        <div class="mail-submit">
+          <input type="email" name="mail" class="mailing-list" id="mail" ></input>
+          <button class="register-button">
+            <img src="imgs/send.svg" alt="Send"></img>
+          </button>
+        </div>
+        <div class="checkbox-content">
+          <label for="confirmation" class="confirmation-label">
+          <input type="checkbox" id="confirmation"></input>
+          <span class="checkbox"></span>
+            Send me daily cat images
+          </label>
+        </div>
+      </div>
+    </form>
 
 
     <!-- Footer -->

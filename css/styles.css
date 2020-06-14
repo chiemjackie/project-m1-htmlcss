@@ -60,7 +60,7 @@ nav {
 
 .nav-item {
   width: 100%;
-  margin-right: 100px;
+  margin-right: 75px;
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -92,48 +92,38 @@ nav {
   width: 66%;
 }
 
-.nav-dropdown {
-  color: #fff;
-  position: relative;
-  display: inline-block;
-}
-
-.nav-dropdown:hover > .dropdown-menu {
-  display: block;
-  position: absolute;
-  background-color: darkgrey;
-  top: 100%;
-  right: 5%;
-}
-
 .dropdown-menu {
   display: none;
+  position: absolute;
+  text-align: right;
+  width: 100%;
+  top: 50px;
 }
 
-.items {
-  margin: 0;
-  padding: 0;
-}
-
-.items > li {
-  padding: 20px;
+.dropdown-menu > a {
+  display: block;
   text-decoration: none;
+  color: white;
+  background-color: #3a3639;
+  padding: 30px 15px;
 }
 
-.items > li:hover {
-  background-color: lightgrey;
+.dropdown-menu > a:hover {background-color: grey;}
+.dropdown:hover > .dropdown-menu {display: block;}
+
+.mobile-menu {
+  position: absolute;
+  display: none;
+  height: 100%;
+  top: 0;
+  right: 45px;
+  width: 35px;
 }
-
-/* Dropdown does not stay most of the time, and navigation needs padding */
-
 
 /* Main */
 
 .bg {
-  display: flex;
   object-fit: cover;
-  /* align-items: center;
-  justify-content: center; */
   width: 100vw;
   height: calc(100vh - 50px);
   padding-top: 50px;
@@ -492,4 +482,150 @@ footer > div > a:hover {
 }
 
 
-/* Media */
+/* Mobile */
+
+@media (max-width: 768px) {
+
+
+  /* NAV */
+  .nav-items,
+  .dropdown,
+  .underline {
+    display: none;
+  }
+
+  .mobile-menu:hover ~ .nav-items,
+  .nav-items:hover,
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-items {
+    position: fixed;
+    width: 100%;
+    background-color: #3a3639;
+    top: 50px;
+    right: 0;
+  }
+
+  .nav-item {
+    transition: background-color 0.2s;
+  }
+
+  .nav-item:hover {
+    background-color: darkgray;
+  }
+
+  /* MAIN */
+  .falcon-container {
+    flex-direction: column;
+    transform: none;
+    justify-content: center;
+    left: 5vw;
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .falcon-left {
+    padding: 20px 46px;
+    justify-content: left;
+    height: 3vh;
+  }
+
+  .falcon-right {
+    height: 30vh;
+    padding: 0 20px;
+  }
+
+  .falcon-container {
+    border: none;
+    width: 100%;
+    left: 0;
+    top: 50px;
+    padding-left: 0;
+  }
+
+  h1,
+  .falcon-right > h2 {
+    border: none;
+    font-size: 24px;
+  }
+
+  .lorem-text {
+    flex-direction: column;
+    line-height: 24px;
+    font-size: 17px;
+  }
+
+  /* ADVANTAGES */
+  .advantages {
+    min-height: calc((100vh - 50px) / 2);
+  }
+
+  .advantages > h2 {
+    font-size: 30px;
+  }
+
+  .advantages > p {
+    font-size: 20px;
+  }
+
+  .gradient {
+    padding-top: 20vh;
+  }
+
+  .animated {
+    display: flex;
+    justify-content: center;
+  }
+
+  .animated-box {
+    border: 7px solid white;
+    width: 60vw;
+    height: 15vh;
+  }
+
+  .animated-box > h4 {
+    font-size: 28px;
+  }
+
+  .animated-box > p {
+    font-size: 18px;
+  }
+
+  .animated-box:hover {
+    animation-name: box-animation;
+    animation-duration: 3s;
+  }
+
+  @keyframes box-animation {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* GALLERY */
+  .section-gallery > .zoom {
+    width: 100%;
+    height: calc(100vh / 3);
+  }
+
+  /* MAILING */
+  .mailing-list {
+    width: 300px;
+  }
+
+  /* FOOTER */
+  footer {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    width: 100%;
+    justify-items: center;
+    align-content: center;
+    padding: 30px 0 0;
+  }
